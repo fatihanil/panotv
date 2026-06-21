@@ -1,0 +1,6 @@
+@charset "utf-8";
+/* CSS Document */
+.video-frame iframe{
+	height: 30vh;
+	width:100%;
+}

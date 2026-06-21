@@ -1,0 +1,32 @@
+[04-Dec-2017 11:51:45 UTC] PHP Warning:  include_once(conf.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 4
+[04-Dec-2017 11:51:45 UTC] PHP Warning:  include_once(): Failed opening 'conf.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 4
+[04-Dec-2017 11:51:45 UTC] PHP Warning:  include_once(system/database.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 5
+[04-Dec-2017 11:51:45 UTC] PHP Warning:  include_once(): Failed opening 'system/database.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 5
+[04-Dec-2017 11:51:45 UTC] PHP Warning:  include_once(inc/session-bar.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 22
+[04-Dec-2017 11:51:45 UTC] PHP Warning:  include_once(): Failed opening 'inc/session-bar.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 22
+[04-Dec-2017 11:52:30 UTC] PHP Warning:  include_once(conf.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 4
+[04-Dec-2017 11:52:30 UTC] PHP Warning:  include_once(): Failed opening 'conf.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 4
+[04-Dec-2017 11:52:30 UTC] PHP Warning:  include_once(system/database.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 5
+[04-Dec-2017 11:52:30 UTC] PHP Warning:  include_once(): Failed opening 'system/database.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 5
+[04-Dec-2017 11:52:30 UTC] PHP Warning:  include_once(inc/session-bar.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 22
+[04-Dec-2017 11:52:30 UTC] PHP Warning:  include_once(): Failed opening 'inc/session-bar.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 22
+[04-Dec-2017 21:20:35 UTC] PHP Warning:  include_once(conf.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 4
+[04-Dec-2017 21:20:35 UTC] PHP Warning:  include_once(): Failed opening 'conf.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 4
+[04-Dec-2017 21:20:35 UTC] PHP Warning:  include_once(system/database.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 5
+[04-Dec-2017 21:20:35 UTC] PHP Warning:  include_once(): Failed opening 'system/database.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 5
+[04-Dec-2017 21:20:35 UTC] PHP Warning:  include_once(inc/session-bar.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 22
+[04-Dec-2017 21:20:35 UTC] PHP Warning:  include_once(): Failed opening 'inc/session-bar.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 22
+[04-Dec-2017 21:22:11 UTC] PHP Warning:  include_once(conf.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 4
+[04-Dec-2017 21:22:11 UTC] PHP Warning:  include_once(): Failed opening 'conf.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 4
+[04-Dec-2017 21:22:11 UTC] PHP Warning:  include_once(system/database.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 5
+[04-Dec-2017 21:22:11 UTC] PHP Warning:  include_once(): Failed opening 'system/database.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 5
+[04-Dec-2017 21:22:11 UTC] PHP Warning:  include_once(inc/session-bar.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 22
+[04-Dec-2017 21:22:11 UTC] PHP Warning:  include_once(): Failed opening 'inc/session-bar.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 22
+[04-Dec-2017 21:42:55 UTC] PHP Warning:  include_once(conf.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 4
+[04-Dec-2017 21:42:55 UTC] PHP Warning:  include_once(): Failed opening 'conf.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 4
+[04-Dec-2017 21:42:55 UTC] PHP Warning:  include_once(system/database.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 5
+[04-Dec-2017 21:42:55 UTC] PHP Warning:  include_once(): Failed opening 'system/database.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 5
+[04-Dec-2017 21:42:55 UTC] PHP Warning:  include_once(inc/session-bar.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header.php on line 22
+[04-Dec-2017 21:42:55 UTC] PHP Warning:  include_once(): Failed opening 'inc/session-bar.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header.php on line 22
+[31-Dec-2017 04:01:12 UTC] PHP Warning:  include_once(SHARED_LIBSdatabase.php): failed to open stream: No such file or directory in /home/uyumaha/public_html/tvpano/inc/header-index.php on line 5
+[31-Dec-2017 04:01:12 UTC] PHP Warning:  include_once(): Failed opening 'SHARED_LIBSdatabase.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/uyumaha/public_html/tvpano/inc/header-index.php on line 5

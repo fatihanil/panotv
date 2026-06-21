@@ -1,0 +1,49 @@
+CREATE TABLE IF NOT EXISTS tvpano_ulusalsinavlar (
+id TINYINT(3) UNSIGNED NOT NULL AUTO_INCREMENT,
+sinavadi VARCHAR(255) COLLATE utf8_turkish_ci DEFAULT NULL,
+sinavtarihi DATE DEFAULT NULL,
+PRIMARY KEY (id)
+) ENGINE=INNODB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+CREATE TABLE IF NOT EXISTS tvpano_data (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `dataname` VARCHAR(255) COLLATE utf8_turkish_ci NOT NULL,
+  `dataproperty` VARCHAR(255) COLLATE utf8_turkish_ci NOT NULL,
+  `datavalue` VARCHAR(255) COLLATE utf8_turkish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+CREATE TABLE IF NOT EXISTS tvpano_duyurular (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `duyurumetni` VARCHAR(255) COLLATE utf8_turkish_ci NOT NULL,
+  `duyurusonu` DATE DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+CREATE TABLE IF NOT EXISTS tvpano_nobetler (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `nobetyeri` VARCHAR(255) COLLATE utf8_turkish_ci NOT NULL,
+  `nobetci` VARCHAR(255) COLLATE utf8_turkish_ci NOT NULL,
+  `nobetgunu` VARCHAR(9) COLLATE utf8_turkish_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+CREATE TABLE IF NOT EXISTS tvpano_slider (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `itemname` TEXT COLLATE utf8_turkish_ci,
+  `itempath` TEXT COLLATE utf8_turkish_ci,
+  `itemtext` TEXT COLLATE utf8_turkish_ci,
+  `itemheader` TEXT COLLATE utf8_turkish_ci,
+  `itemexpired` DATE DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
+CREATE TABLE `tvpano_yetkilileri` (
+  `id` INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `isim` VARCHAR(100) CHARACTER SET utf8 NOT NULL,
+  `parola` VARCHAR(200) CHARACTER SET utf8 NOT NULL,
+  `sonoturum` DATETIME DEFAULT NULL,
+  `eposta` VARCHAR(200) CHARACTER SET utf8 NOT NULL,
+  `rolu` VARCHAR(2) CHARACTER SET utf8 NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;"

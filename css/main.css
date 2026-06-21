@@ -1,0 +1,162 @@
+body{
+	margin:0px;
+	padding:0px;
+	background-color:#fff !important;
+	color:#000 !important;
+	font-family:'Ubuntu',sans-serif !important;
+}
+/* .container-fluid{background: #000;} */
+
+footer{
+	min-height: 50px;
+}
+footer p{
+	margin:auto;
+}
+.bosluk{
+	height: 2px;width: 100%;display: block;
+}
+h2{
+	margin:0px;
+}
+#sag-sutun{float:right;height: 100%;position: fixed;top:0;right:0;}
+#sol-sutun{float: left;height: 100%;position:fixed;top:0;left:0;}
+.sinava-kalan-sure{
+	font-size: 20px;
+	font-weight: 800;
+	font-style: normal;
+	padding:0px;
+	margin: 0px;
+}
+/*YARDIM İKONLARI */
+#pencerenin-sag-alt-kosesine-disliyi-sabitle{
+	position: fixed;	
+	bottom:5px;
+	padding:5px;
+	right: 5px;
+	z-index: 9999;
+	float:right;
+}
+#pencerenin-ust-kenarina-sabitle{
+	position: fixed;
+	top:0;
+	padding:5px;
+	right: 55px;
+	z-index: 9999;
+	float:right;
+}
+#pencerenin-ust-kenarina-sabitle-yardim{
+	position: fixed;
+	top:0;
+	padding:5px;
+	right: 15px;
+	z-index: 9998;
+	float:right;
+}
+#login-logo{
+	width:250px;
+	height: 250px;
+}
+#tarih-alani, #saat-alani, #sunucu-zamani{
+	font-size: 2rem;
+	padding: 0.8rem 2rem 0.8rem 2rem;
+}
+.sola-yasla{
+	float:left;
+	clear:right;
+}
+.baslik-kutusu{
+	background:#69343e;
+	text-transform: uppercase;
+	color:aliceblue;
+	font-family: "ubuntu condensed",serif;
+	text-align: center;
+	font-style: normal;
+}
+
+#duyuru-bandi{
+	font-family:'Ubuntu Condensed',sans-serif;
+	background-color:#D3A625;
+	color:#990000;	
+	display:block;
+	font-size:3rem;
+	text-shadow:1px 1px #FBFBFB;	
+	font-weight: bold;
+	
+	
+}
+#duyuru-metni{color:#000000}
+#orta-sutun-sarmala{
+	padding: 0px;
+	width:100%;
+}
+#photo-slider{
+	width: 100%;
+}
+#photo-slider img{
+	min-width: 650px;
+	width: 100%;
+}
+.nobet-tablosu-basligi{
+	font-family: 'Ubuntu Condensed',sans-serif;
+	background: #fff;color: #000;padding: 3px;
+	display:block;text-transform: uppercase;
+}
+/* admin page stylization */
+.thumbs_form{
+	width:50px;
+	height: 50px;
+}
+.submit_forms{
+	width: 50px;
+	height: 50px;
+}
+/*YÖNETİM FORMLARINDA DÜZENİ SAĞLAMAK İÇİN KULLANILACAK CSS*/
+/*label{
+	margin:1em;
+	width: 100%;
+	float:left;
+	height:2em;
+	position: absolute;
+}*/
+.thumbnail_picture{
+	width:90px;
+	height:90px;
+	margin:5px;
+}
+.management-table{
+	width:100%;
+	padding:5px;
+	border: none;	
+}
+.gallery-table{
+	width:50%;
+	padding:5px;
+	border:none;
+}
+.gallery-table tr td th{
+	border:none;
+}
+td{
+	padding:5px;
+	border:1px #101B42 solid;
+}
+tr{
+	margin:5px;
+	border:1px #101B42 solid;
+}
+th{
+	text-transform: uppercase;
+	padding: 5px 0 5px 0;
+	text-align: center;
+}
+.gallery-thumbs{
+	width:120px;
+	height:90px;
+}
+/*########### YARDIM SAYFASI BİÇİMLENDİRMELERİ*/
+.yardim-resmi{
+	display:inline-block;
+	width:200px;	
+	float:right;
+}
