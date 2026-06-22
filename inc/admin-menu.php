@@ -1,6 +1,6 @@
 <div class="col-md-2">
 	<fieldset>
-		<legend>TV Pano YÖNETİMİ</legend>
+		<legend>TV PANO </br>Yönetim Paneli</legend>
 		<ul class="nav nav-pills nav-stacked">
 			<li class="active"><a href="options.php">Temel Ayarlar</a></li>
 			<li><a href="gallery.php">Galleri</a></li>
