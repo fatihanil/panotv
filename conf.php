@@ -4,7 +4,7 @@ include_once("site_path.php");
 //DATABASE INFORMATION 
 //define("MYSQL_HOST","85.95.231.48");
 define("MYSQL_HOST","localhost");
-define("MYSQL_USER","denizlimkal_tvpa");
+define("MYSQL_USER","denizlimkal_tvpano");
 define("MYSQL_PASS","Hzz2ELDDdee7z7XJeNgZ");
 define("MYSQL_DATABASE","denizlimkal_tvpano");
 define("DB_PREFIX","tvpano_");
