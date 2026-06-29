@@ -19,16 +19,16 @@ function oturumAc($user_email,$user_pass){
         $son_oturum_zamani=$yetkili_bilgileri[0]['sonoturum'];
         $eposta=$user_email;
         $_SESSION['yetkili']=array("rolu"=>$rolu,"ismi"=>$isim,"eposta"=>$eposta,"sonoturum"=>$son_oturum_zamani);
-        header("Location:".SITE_URL."options.php");
+        header("Location: ../options.php");
 		
 	}else{
 		//echo "Oturum açılamadı";
-		header("Location:".SITE_URL."login.php");
+		header("Location: ../login.php");
 	}
 }
 function oturumuKapat(){	
     session_destroy();
-    header("Location:".SITE_URL."login.php");
+    header("Location: ../login.php");
 }
 //--------------------------------function declarations end
 
@@ -36,7 +36,7 @@ if($_POST['form-button']=="OTURUMU AÇ"){
 	$parola_MD5=md5($_POST['user-pass']);
     oturumAc($_POST['user-email'],$parola_MD5);
 }else{
-    header("Location:".SITE_URL."login.php");
+    header("Location: ../login.php");
 }
 if(isset($_POST['session-end-button'])){
 	oturumuKapat();

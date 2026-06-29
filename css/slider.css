@@ -8,31 +8,36 @@
     height: 40vh;
     overflow-x: hidden;
 }
+
 .wrap-slider {
     /*position: relative;*/
 }
 
 .slide {
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #000;
 }
-.slide ul li{
-	display:block;
-	width: 100%;
-	height: 300px;
-	
+
+.slide ul li {
+    display: block;
+    width: 100%;
+    height: 300px;
+
 }
+
 .slide-content {
     display: flex;
-    flex-direction:column-reverse;
+    flex-direction: column-reverse;
     justify-content: bottom;
     align-items: right;
-	
+
 }
+
 .slide-content span {
     font-size: 2rem;
     color: azure;
-	background-color: black;
-	opacity: 0.8;
+    background-color: black;
+    opacity: 0.8;
 }

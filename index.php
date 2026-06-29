@@ -98,7 +98,7 @@ $aylar = ["01" => "ocak", "02" => "şubat", "03" => "mart", "04" => "nisan", "05
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="wrap-slider">
@@ -224,7 +224,7 @@ $aylar = ["01" => "ocak", "02" => "şubat", "03" => "mart", "04" => "nisan", "05
                     }
                 </script>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div id="nobet-listesi" class="table-responsive">
                     <h2 class="baslik-kutusu"><?php $gunun_tarihi = date('d ') . $aylar[date('m')] . date(' Y - ') . $haftanin_gunleri[date('w')];
                 echo $gunun_tarihi;
@@ -260,21 +260,25 @@ $aylar = ["01" => "ocak", "02" => "şubat", "03" => "mart", "04" => "nisan", "05
     <section>
         <div class="row">
             <div id="duyuru-bandi" class="col-md-12 center-block">
-                <marquee direction="left" scrolldelay="20" scrollamount="3" truespeed>
+                <div class="marquee">
+                    <div class="marquee__track">
+                    
                     <?php
                     $sql = "SELECT duyurumetni FROM " . DUYURULAR_DB_TABLE . ";";
                     $duyurular = $database->sentQuery($sql);
                     $i = 0;
                     while (isset($duyurular[$i])) {
                         foreach ($duyurular[$i] as $alan => $deger) {
-                            if ($alan == "duyurumetni"): echo "$deger &nbsp; &raquo; &raquo; &raquo; &nbsp; ";
+                            if ($alan == "duyurumetni"): echo "<span>$deger &nbsp; &raquo; &raquo; &raquo; &nbsp; </span>";
                             endif;
                         }
                         $i++;
                     }
                     unset($duyurular);
                     ?>
-                </marquee>
+                    
+                    </div>
+                </div>
             </div>
         </div>
     </section>

@@ -97,7 +97,7 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 		
 	<?php
 }else {
-	header( "Location:".SITE_URL."login.php" );
+	header( "Location: login.php" );
 }//----------------session control wrapper if
 include_once("inc/footer.php");
 ?>

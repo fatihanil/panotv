@@ -75,7 +75,7 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) { //----------------session control wrapp
 	</div> <
 	<?php
 } else {
-	header( "Location:" . SITE_ROOT . "login.php" );
+	header( "Location: login.php" );
 } //----------------session control wrapper if
 include_once( "inc/footer.php" );
 ?>

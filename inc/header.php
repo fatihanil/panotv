@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="tr">
 <?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 include_once( SHARED_LIBS."database.php" );
 ?>
 <head>
@@ -26,6 +29,8 @@ include_once( SHARED_LIBS."database.php" );
 	<a href="yardim.php"><i id="pencerenin-ust-kenarina-sabitle-yardim" class="fa fa-question-circle fa-2x"></i></a>
 	<main class="row">
 		<?php
-		include_once( "admin-menu.php" );
+		if (isset($_SESSION['yetkili'])) {
+			include_once( "admin-menu.php" );
+		}
 		?>
-		<div class="col-md-10">
+		<div class="<?php echo isset($_SESSION['yetkili']) ? 'col-md-10' : 'col-md-12'; ?>">

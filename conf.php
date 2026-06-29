@@ -18,8 +18,16 @@ define("SLIDER_DB_TABLE",DB_PREFIX."slider");
 define("ULUSALSINAVLAR_DB_TABLE",DB_PREFIX."ulusalsinavlar");
 
 //APP PATH CONSTANTS
-define("SITE_URL","http://denizlimkal.k12.tr/");
-//define("SITE_URL","http://85.95.231.48/~denizlimkal/");//define("SITE_URL","http://fatihanil.net.tr/mkal/");
+if (isset($_SERVER['HTTP_HOST'])) {
+	$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
+	if (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false || $_SERVER['HTTP_HOST'] == '127.0.0.1') {
+		define("SITE_URL", $protocol . $_SERVER['HTTP_HOST'] . "/panotv_mkal/");
+	} else {
+		define("SITE_URL", "http://denizlimkal.k12.tr/");
+	}
+} else {
+	define("SITE_URL", "http://denizlimkal.k12.tr/");
+}
 define("SHARED_LIBS",$_SERVER['DOCUMENT_ROOT']."/shared_libs/");
 define("APP_IMAGE_DIR","img/");
 
