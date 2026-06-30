@@ -6,14 +6,14 @@
                 <p style="margin: 0 !important; padding: 0 !important; line-height: 18px !important; height: 18px !important;">
                     <b class="text-warning" style="vertical-align: middle;">Design and Development: <a href="http://www.fatihanil.net.tr"><?xml version="1.0" encoding="UTF-8"?>
 Fatih Anıl</a> 
-&copy;TVPano v1.1<i class="fa fa-refresh fa-spin fa-1x fa-fw" style="vertical-align: middle;"></i> &copy; 2017 | 2026
+&copy;<?php echo APP_TITLE; ?><i class="fa fa-refresh fa-spin fa-1x fa-fw" style="vertical-align: middle;"></i> &copy; 2017 | 2026
                     </b>
                     <i class="text-danger text-weight-light" style="vertical-align: middle;">All rights reserved &middot;				 
-                        Open Sources.
+                        Credits.
                         <a href="http://getbootstrap.com/">Bootstrap</a>
                         &amp;	
                         <a href="http://fontawesome.io">FontAwesome</a>
-                        &middot;
+                        &amp;
                         <a href="https://www.traversymedia.com/">Traversy Media</a>
                         &amp;
                         <a href="http://www.w3schools.com">W3Schools</a> 
