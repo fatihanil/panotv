@@ -43,24 +43,24 @@ $aylar = ["01" => "ocak", "02" => "şubat", "03" => "mart", "04" => "nisan", "05
                     }
                     if ($alan == "sinavtarihi") {
                         $o_sinav = new DateTime($deger);
+                        $o_sinav->setTime(0, 0, 0);
                         $o_bugun = new DateTime();
-                        $d_sinavtarihi = getdate(strtotime($deger));
-                        $d_bugun = getdate();
+                        $o_bugun->setTime(0, 0, 0);
                         
-                        $kalan_ay = $o_sinav->diff($o_bugun)->m;
-                        $sinava_ay = $kalan_ay . " AY";
-                        $kalan_gun =$o_sinav->diff($o_bugun)->d;
-                        $sinava_gun = $kalan_gun . " GÜN";
-                        if ($kalan_ay >= 0 or $kalan_gun > 0) {
+                        if ($o_sinav < $o_bugun) {
+                            $altmesaj = "SINAV BİTTİ";
+                            $sinava_kalan = "Geçmiş Olsun";
+                        } else {
+                            $interval = $o_bugun->diff($o_sinav);
+                            $kalan_ay = $interval->m + ($interval->y * 12);
+                            $kalan_gun = $interval->d;
+                            
                             $altmesaj = "KALDI";
                             if ($kalan_ay == 0) {
-                                $sinava_kalan = $sinava_gun;
+                                $sinava_kalan = $kalan_gun . " GÜN";
                             } else {
-                                $sinava_kalan = $sinava_ay . " " . $sinava_gun;
+                                $sinava_kalan = $kalan_ay . " AY " . $kalan_gun . " GÜN";
                             }                            
-                        } else {
-                            $altmesaj = "SINAV BİTTİ";
-                            $sinava_kalan = "SINAV TAKVİMİNİ GÜNCELLEYİN";
                         }
                     }
                     echo "<div class='panel panel-body'><em class='sinava-kalan-sure'>$sinava_kalan</em></div>";
