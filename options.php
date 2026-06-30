@@ -16,28 +16,40 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 			<tr>			
 				<th></th>
 				<th>NÖBET YERİ</th>
+				<th></th>
 			</tr>
 	<?php
 		$database=new mayeSQL();
-		$nobetyerleri=$database->sentQuery("SELECT id,datavalue FROM ".APP_DATA_DB_TABLE." WHERE dataname=\"nobet yeri\";");
+		$nobetyerleri=$database->sentQuery("SELECT id,datavalue FROM ".APP_DATA_DB_TABLE." WHERE dataname=\"nobet yeri\" ORDER BY id ASC;");
 		$i=0;
 		while(isset($nobetyerleri[$i])){
 			echo "<tr>";
+			$id_icin = "";
 			foreach($nobetyerleri[$i] as $alan=>$alan_degeri){
-				if($alan=="id"){ echo "<td><input type=\"radio\" name=\"nobetyeri_id\" value=\"$alan_degeri\" checked></td>"; }
+				if($alan=="id"){ 
+					echo "<td><input type=\"radio\" id=\"radio_$alan_degeri\" name=\"nobetyeri_id\" value=\"$alan_degeri\"></td>"; 
+					$id_icin = $alan_degeri;
+				}
 				if($alan=="datavalue"){ echo "<td><input type=\"text\" name=\"nobet_yeri\" value=\"$alan_degeri\"></td>"; }			
+			}
+			if($id_icin != "") {
+				echo "<td><button type=\"submit\" name=\"form-button\" value=\"NÖBET YERİNİ SİL\" class=\"btn btn-danger btn-sm\" title=\"Bu Nöbet Yerini Sil\" onclick=\"document.getElementById('radio_$id_icin').checked=true;\"><strong style=\"font-size: 1.5rem; line-height: 0.5;\">-</strong></button></td>";
 			}
 			$i++;
 			echo "</tr>";
 		}
 		unset($nobetyerleri);	
 		?>	
+			<tr>
+				<td colspan="3" style="text-align: right;">
+					<button class="btn btn-success btn-sm" type="submit" name="form-button" value="NÖBET YERİ EKLE" title="Yeni Nöbet Yeri Ekle">
+						<strong style="font-size: 1.5rem; line-height: 0.5;">+</strong>
+					</button>
+				</td>
+			</tr>
 		</table>
-		</label>
 		<label>
-			<input class="btn btn-danger" type="submit" value="NÖBET YERİNİ SİL" name="form-button">
-			<input class="btn btn-success" type="submit" value="NÖBET YERİ EKLE" name="form-button">
-			<input class="btn btn-primary" type="submit" value="NÖBET YERİNİ GÜNCELLE" name="form-button">
+			<button class="btn btn-primary" type="submit" name="form-button" value="NÖBET YERİNİ GÜNCELLE">SEÇİLENİ GÜNCELLE</button>
 		</label>
 	</form>
 
@@ -83,7 +95,7 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 
 <div class="panel panel-primary">
 	<div class="panel panel-heading">
-		Renk Ayarları
+		RENKLERİ AYARLA
 	</div>
 	<div class="panel panel-body">
 		<form action="system/system.php" method="post">
@@ -96,9 +108,9 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 				$i++;
 				echo "</label>";
 			}
-			if($colors[$i]==null){
-				echo "<label>Duyuru Zemin<input type='color' name=''></label><label>Duyuru Başlık<input type='color' name=''></label>";
-				echo "<label>Başlık Zemini<input type='color' name=''></label><label>Başlık Yazısı<input type='color' name=''></label>";
+			if(!is_array($colors) || empty($colors)){
+				echo "<label>Duyuru Zemin<input type='color' name='Duyuru Zemin' value='#ffffff'></label><label>Duyuru Metni<input type='color' name='Duyuru Metni' value='#000000'></label>";
+				echo "<label>Başlık Zemini<input type='color' name='Başlık Zemini' value='#ffffff'></label><label>Başlık Yazısı<input type='color' name='Başlık Yazısı' value='#000000'></label>";
 			}
 			?>
 					<input class="btn btn-primary" type="submit" value="RENKLERİ DEĞİŞTİR" name="form-button">

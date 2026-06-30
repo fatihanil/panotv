@@ -43,9 +43,31 @@ switch ($_POST['form-button']) {
 		}
 		break;
 	case "RENKLERİ DEĞİŞTİR":
-		if ( $sorgu_islendi = renkleriDegistir( $_POST[ "" ], $gonderen_sayfa ) ) {
-
+		$expected_colors = ["Duyuru Zemin", "Duyuru Başlık", "Başlık Zemini", "Başlık Yazısı"];
+		
+		$database = new mayeSQL();
+		$colors_db = $database->sentQuery("select dataname from ".APP_DATA_DB_TABLE." where dataproperty=\"color\";");
+		
+		if (is_array($colors_db)) {
+			foreach ($colors_db as $color) {
+				if (!in_array($color['dataname'], $expected_colors)) {
+					$expected_colors[] = $color['dataname'];
+				}
+			}
 		}
+
+		foreach ($expected_colors as $db_isim) {
+			// PHP form isimlerindeki boşluk ve noktaları alt çizgiye çevirir
+			$post_isim = str_replace(array(' ', '.'), '_', $db_isim); 
+			
+			if(isset($_POST[$post_isim])){
+				// Veritabanına # işareti olmadan kaydediliyor, bu yüzden # işaretini kaldırıyoruz
+				$yeni_renk = ltrim($_POST[$post_isim], '#');
+				renkleriDegistir($db_isim, $yeni_renk, $gonderen_sayfa);
+			}
+		}
+		
+		header( "Location:" . SITE_URL . $gonderen_sayfa );
 		break;
 	case "DUYURU EKLE":
 		if ( $sorgu_islendi = duyuruEkle( $gonderen_sayfa ) ) {

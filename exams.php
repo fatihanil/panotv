@@ -50,7 +50,7 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 			</tr>
 		</table>
 			<label>
-				<input class="btn btn-primary" type="submit" value="SEÇİLENİ GÜNCELLE" name="form-button">
+				<button class="btn btn-primary" type="submit" name="form-button" value="SINAVI GÜNCELLE">SEÇİLENİ GÜNCELLE</button>
 			</label>
 		</form>
 		

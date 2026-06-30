@@ -59,8 +59,16 @@ function logoyuGuncelle($okulun_logosu, $gonderen_sayfa) {
 
 function renkleriDegistir($neyin_rengi, $renk, $gonderen_sayfa) {
     $database = new mayeSQL();
-    if ($database->sentQuery("UPDATE " . APP_DATA_DB_TABLE . " SET datavalue=\"$renk\" WHERE dataname=\"$neyin_rengi\";")) {
-        header("Location:" . SITE_URL . $gonderen_sayfa);
+    $kayit_varmi = $database->sentQuery("SELECT * FROM " . APP_DATA_DB_TABLE . " WHERE dataname=\"$neyin_rengi\";");
+    
+    if (is_array($kayit_varmi) && count($kayit_varmi) > 0) {
+        $sql = "UPDATE " . APP_DATA_DB_TABLE . " SET datavalue=\"$renk\" WHERE dataname=\"$neyin_rengi\";";
+    } else {
+        $sql = "INSERT INTO " . APP_DATA_DB_TABLE . " (dataname, dataproperty, datavalue) VALUES (\"$neyin_rengi\", 'color', \"$renk\");";
+    }
+    
+    if ($database->sentQuery($sql)) {
+        // Yönlendirme işlemi system.php tarafında toplu olarak yapılacaktır.
     }
 }
 
@@ -130,7 +138,7 @@ function nobetiYeriniGuncelle($nobetyeri_id, $nobet_yeri, $gonderen_sayfa) {
     }
 }
 
-function nobetcileri_kaydet($nobet_id = null, $nobet_yeri, $nobetci, $nobet_gunu, $gonderen_sayfa) {
+function nobetcileri_kaydet($nobet_id, $nobet_yeri, $nobetci, $nobet_gunu, $gonderen_sayfa) {
     $database = new mayeSQL();
     if (is_null($nobet_id)) {
         $i = 0;
