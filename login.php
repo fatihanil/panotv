@@ -68,6 +68,10 @@ include_once("inc/header.php");
 							<h4 class="list-group-item-heading"><i class="fa fa-bullhorn"></i> Duyuru</h4>
 							<p class="list-group-item-text">Kayan yazı duyuru bandında gösterilecek duyuruları ekleyin veya silin.</p>
 						</a>
+						<a href="exams.php" class="list-group-item">
+							<h4 class="list-group-item-heading"><i class="fa fa-graduation-cap"></i> Sınavlar</h4>
+							<p class="list-group-item-text">Sınav takvimini ve ayarlarını yönetin.</p>
+						</a>
 					</div>
 				</div>
 			</div>

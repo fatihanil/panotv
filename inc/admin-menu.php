@@ -7,6 +7,7 @@
 			<li><a href="turns.php">Nöbetler</a></li>
 			<li><a href="lunchs.php">Yemek</a></li>
 			<li><a href="announcement.php">Duyuru</a></li>
+			<li><a href="exams.php">Sınavlar</a></li>
 		</ul>
 	</fieldset>	
 </div>
