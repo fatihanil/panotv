@@ -30,7 +30,7 @@ $aylar = ["01" => "ocak", "02" => "şubat", "03" => "mart", "04" => "nisan", "05
                     ?>
                 </div>
                 <div id="sinava-ne-kadar-var-kutusu">
-                    <h2 class="baslik-kutusu">SINAV TAKVİMİ</h2>
+                    <h2 class="baslik-kutusu">ULUSAL SINAVLAR</h2>
                     <?php
                     $sql = "SELECT sinavadi,sinavtarihi FROM " . ULUSALSINAVLAR_DB_TABLE . " ORDER BY sinavtarihi ASC;";
                     $sinavlar = $database->sentQuery($sql);

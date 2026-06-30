@@ -59,15 +59,6 @@ footer p {
 	padding: 0;
 }
 
-.tvpano-footer-icons {
-	height: 18px;
-	max-height: 20px;
-	width: auto;
-	vertical-align: middle;
-	margin: 0 2px;
-	transform: scale(0.8);
-}
-
 .bosluk {
 	height: 2px;
 	width: 100%;
@@ -148,9 +139,9 @@ h2 {
 }
 
 .baslik-kutusu {
-	background: #69343e;
+	background: var(--baslik-zemin, #69343e);
 	text-transform: uppercase;
-	color: aliceblue;
+	color: var(--baslik-metni, aliceblue);
 	font-family: "ubuntu condensed", serif;
 	text-align: center;
 	font-style: normal;
@@ -158,18 +149,14 @@ h2 {
 
 #duyuru-bandi {
 	font-family: 'Ubuntu Condensed', sans-serif;
-	background-color: #D3A625;
-	color: #990000;
+	background-color: var(--duyuru-zemin, #D3A625);
+	color: var(--duyuru-metni, #990000);
 	display: block;
 	font-size: 3rem;
 	text-shadow: 1px 1px #FBFBFB;
 	font-weight: bold;
 
 
-}
-
-#duyuru-metni {
-	color: #000000
 }
 
 #orta-sutun-sarmala {

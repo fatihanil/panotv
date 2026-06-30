@@ -30,7 +30,7 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 					echo "<td><input type=\"radio\" id=\"radio_$alan_degeri\" name=\"nobetyeri_id\" value=\"$alan_degeri\"></td>"; 
 					$id_icin = $alan_degeri;
 				}
-				if($alan=="datavalue"){ echo "<td><input type=\"text\" name=\"nobet_yeri\" value=\"$alan_degeri\"></td>"; }			
+				if($alan=="datavalue"){ echo "<td><input type=\"text\" name=\"nobet_yeri[$id_icin]\" value=\"$alan_degeri\"></td>"; }			
 			}
 			if($id_icin != "") {
 				echo "<td><button type=\"submit\" name=\"form-button\" value=\"NÖBET YERİNİ SİL\" class=\"btn btn-danger btn-sm\" title=\"Bu Nöbet Yerini Sil\" onclick=\"document.getElementById('radio_$id_icin').checked=true;\"><strong style=\"font-size: 1.5rem; line-height: 0.5;\">-</strong></button></td>";
@@ -109,8 +109,8 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 				echo "</label>";
 			}
 			if(!is_array($colors) || empty($colors)){
-				echo "<label>Duyuru Zemin<input type='color' name='Duyuru Zemin' value='#ffffff'></label><label>Duyuru Metni<input type='color' name='Duyuru Metni' value='#000000'></label>";
-				echo "<label>Başlık Zemini<input type='color' name='Başlık Zemini' value='#ffffff'></label><label>Başlık Yazısı<input type='color' name='Başlık Yazısı' value='#000000'></label>";
+				echo "<label>Duyuru Zemin<input type='color' name='Duyuru Zemin' value='#d3a625'></label><label>Duyuru Metni<input type='color' name='Duyuru Metni' value='#990000'></label>";
+				echo "<label>Başlık Zemini<input type='color' name='Başlık Zemini' value='#69343e'></label><label>Başlık Metni<input type='color' name='Başlık Metni' value='#f0f8ff'></label>";
 			}
 			?>
 					<input class="btn btn-primary" type="submit" value="RENKLERİ DEĞİŞTİR" name="form-button">

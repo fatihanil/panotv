@@ -30,7 +30,8 @@ switch ($_POST['form-button']) {
 		}
 		break;
 	case "SINAVI GÜNCELLE":
-		if ( $sorgu_islendi = sinaviGuncelle( $_POST[ "sinav_id" ], $_POST[ "sinav_adi" ], $_POST[ "sinav_tarihi" ], $gonderen_sayfa ) ) {
+		$secilen_id = $_POST[ "sinav_id" ] ?? null;
+		if ( $secilen_id && $sorgu_islendi = sinaviGuncelle( $secilen_id, $_POST[ "sinav_adi" ][$secilen_id], $_POST[ "sinav_tarihi" ][$secilen_id], $gonderen_sayfa ) ) {
 			//echo "Seçili kayıt güncellendi";
 			header( "Location:" . SITE_URL . $gonderen_sayfa );
 		}
@@ -43,7 +44,7 @@ switch ($_POST['form-button']) {
 		}
 		break;
 	case "RENKLERİ DEĞİŞTİR":
-		$expected_colors = ["Duyuru Zemin", "Duyuru Başlık", "Başlık Zemini", "Başlık Yazısı"];
+		$expected_colors = ["Duyuru Zemin", "Duyuru Metni", "Başlık Zemini", "Başlık Metni"];
 		
 		$database = new mayeSQL();
 		$colors_db = $database->sentQuery("select dataname from ".APP_DATA_DB_TABLE." where dataproperty=\"color\";");
@@ -81,7 +82,10 @@ switch ($_POST['form-button']) {
 		}
 		break;
 	case "DUYURUYU GÜNCELLE":
-		$sorgu_islendi = duyuruyuGuncelle( $_POST[ "duyuru-id" ], $_POST[ "duyuru-metni" ], $_POST[ "duyuru-sonu" ], $gonderen_sayfa );
+		$secilen_id = $_POST[ "duyuru-id" ] ?? null;
+		if ($secilen_id) {
+			$sorgu_islendi = duyuruyuGuncelle( $secilen_id, $_POST[ "duyuru-metni" ][$secilen_id], $_POST[ "duyuru-sonu" ][$secilen_id], $gonderen_sayfa );
+		}
 		break;
 	case  "YEMEKLERİ KAYDET":
 		/* @var $_POST type */
@@ -94,7 +98,10 @@ switch ($_POST['form-button']) {
 		$sorgu_islendi = nobetYeriEkle( $gonderen_sayfa );
 		break;
 	case "NÖBET YERİNİ GÜNCELLE":
-		$sorgu_islendi = nobetiYeriniGuncelle( $_POST[ 'nobetyeri_id' ], $_POST[ 'nobet_yeri' ], $gonderen_sayfa );
+		$secilen_id = $_POST[ 'nobetyeri_id' ] ?? null;
+		if ($secilen_id) {
+			$sorgu_islendi = nobetiYeriniGuncelle( $secilen_id, $_POST[ 'nobet_yeri' ][$secilen_id], $gonderen_sayfa );
+		}
 		break;
 	case "NÖBETÇİLERİ KAYDET":
 		$sorgu_islendi = nobetcileri_kaydet( $_POST['id'],$_POST[ 'nobet_yeri' ], $_POST[ 'nobetci' ], $_POST[ 'nobet_gunu' ], $gonderen_sayfa );

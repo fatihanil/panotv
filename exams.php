@@ -30,8 +30,8 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 						echo "<td><input type=\"radio\" id=\"radio_$alan_degeri\" name=\"sinav_id\" value=\"$alan_degeri\" checked></td>"; 
 						$id_icin = $alan_degeri;
 					}
-					if($alan=="sinavadi"){ echo "<td><input type=\"text\" name=\"sinav_adi\" value=\"$alan_degeri\"></td>"; }
-					if($alan=="sinavtarihi"){ echo "<td><input type=\"date\" name=\"sinav_tarihi\" value=\"$alan_degeri\"></td>"; }
+					if($alan=="sinavadi"){ echo "<td><input type=\"text\" name=\"sinav_adi[$id_icin]\" value=\"$alan_degeri\"></td>"; }
+					if($alan=="sinavtarihi"){ echo "<td><input type=\"date\" name=\"sinav_tarihi[$id_icin]\" value=\"$alan_degeri\"></td>"; }
 				}
 				if($id_icin != "") {
 					echo "<td><button type=\"submit\" name=\"form-button\" value=\"SINAVI SİL\" class=\"btn btn-danger btn-sm\" title=\"Bu Sınavı Sil\" onclick=\"document.getElementById('radio_$id_icin').checked=true;\"><strong style=\"font-size: 1.5rem; line-height: 0.5;\">-</strong></button></td>";

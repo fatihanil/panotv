@@ -31,8 +31,8 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 			  echo "<td><input type=\"radio\" id=\"radio_$alan_degeri\" name=\"duyuru-id\" value=\"$alan_degeri\"></td>";
 			  $id_icin = $alan_degeri;
 		  }
-		  if($alan=="duyurumetni"){ echo "<td><input type=\"text\"  name=\"duyuru-metni\" value=\"$alan_degeri\"></td>"; }
-		  if($alan=="duyurusonu"){ echo "<td><input type=\"date\" name=\"duyuru-sonu\" value=\"$alan_degeri\"></td>"; }
+		  if($alan=="duyurumetni"){ echo "<td><input type=\"text\"  name=\"duyuru-metni[$id_icin]\" value=\"$alan_degeri\"></td>"; }
+		  if($alan=="duyurusonu"){ echo "<td><input type=\"date\" name=\"duyuru-sonu[$id_icin]\" value=\"$alan_degeri\"></td>"; }
 	  }
 	  if($id_icin != "") {
 		  echo "<td><button type=\"submit\" name=\"form-button\" value=\"DUYURUYU SİL\" class=\"btn btn-danger btn-sm\" title=\"Bu Duyuruyu Sil\" onclick=\"document.getElementById('radio_$id_icin').checked=true;\"><strong style=\"font-size: 1.5rem; line-height: 0.5;\">-</strong></button></td>";
