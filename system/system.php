@@ -20,19 +20,19 @@ switch ($_POST['form-button']) {
 	case "SINAV ALANI EKLE":
 		if ( $sorgu_islendi = sinavEkle( "", "2017-09-28", $gonderen_sayfa ) ) {
 			//echo "Yeni kayıt eklendi";
-			header( "Location:" . SITE_URL . "options.php" );
+			header( "Location:" . SITE_URL . $gonderen_sayfa );
 		}
 		break;
 	case "SINAVI SİL":
 		if ( $sorgu_islendi = sinaviSil( $_POST[ "sinav_id" ], $gonderen_sayfa ) ) {
 			//echo "Seçili kayıt silindi";
-			header( "Location:" . SITE_URL . "options.php" );
+			header( "Location:" . SITE_URL . $gonderen_sayfa );
 		}
 		break;
 	case "SINAVI GÜNCELLE":
 		if ( $sorgu_islendi = sinaviGuncelle( $_POST[ "sinav_id" ], $_POST[ "sinav_adi" ], $_POST[ "sinav_tarihi" ], $gonderen_sayfa ) ) {
 			//echo "Seçili kayıt güncellendi";
-			header( "Location:" . SITE_URL . "options.php" );
+			header( "Location:" . SITE_URL . $gonderen_sayfa );
 		}
 		break;
 	case "LOGOYU GÜNCELLE":
