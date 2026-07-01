@@ -43,7 +43,7 @@ define("FILE_UPLOAD_URL",SITE_URL.FILE_UPLOAD_DIR);
 define("SITE_CSS_DIR",SITE_URL."css/");
 define("SLIDER_MEDIA_PATH","slider/media/");
 //APPLICATION CONST
-define("APP_TITLE","TVPano 1.2");
+define("APP_TITLE","TVPano 1.3");
 define("MANAGEMENT_LOGO",SITE_URL.APP_IMAGE_DIR."logo-tvpano.png");
 // test constants
 //echo $_SERVER['DOCUMENT_ROOT']."\n";
