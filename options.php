@@ -118,24 +118,7 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 			</form>
 	</div>
 </div>
-<div class="panel panel-warning">
-	<div class="panel panel-heading">
-		FOTOĞRAF SUNUSUNUN EKRANDA KALMA SÜRESİ(milisaniye)
-	</div>
-	<div class="panel panel-body">
-	<form action="system/system.php" method="post">
-	<?php
-		$slider_ekran_suresi=$database->sentQuery("SELECT CAST(datavalue AS UNSIGNED)AS datavalue FROM ".APP_DATA_DB_TABLE." WHERE dataname='slidertime';");
-			$i=0;
-			while(isset($slider_ekran_suresi[$i])){
-				echo "<input type='text' name='slider-suresi' value='".$slider_ekran_suresi[0]['datavalue']."'>";	
-				$i++;				
-			}			
-			?>
-			<input class="btn btn-warning" type="submit" name="form-button" value="SLIDER SÜRESİNİ KAYDET">
-	</form>
-	</div>
-</div>
+
 
 	<?php
 }else {

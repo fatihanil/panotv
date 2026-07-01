@@ -8,7 +8,7 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 
 <div class="panel panel-primary">
 	<div class="panel panel-heading">
-		YAYINLANMIŞ MEDYALAR
+		YAYINDAKİ FOTOĞRAFLAR
 	</div>
 	<div class="panel panel-body">
 		<form action="system/system.php" method="post">
@@ -82,6 +82,43 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 	</div>
 </div>
 
+<div class="panel panel-warning">
+	<div class="panel panel-heading">
+		FOTOĞRAFIN EKRANDA KALMA SÜRESİ (saniye)
+	</div>
+	<div class="panel panel-body">
+	<form action="system/system.php" method="post">
+	<?php
+		$slider_ekran_suresi=$database->sentQuery("SELECT CAST(datavalue AS UNSIGNED)AS datavalue FROM ".APP_DATA_DB_TABLE." WHERE dataname='slidertime';");
+			if(isset($slider_ekran_suresi[0])){
+				$sure_saniye = intval($slider_ekran_suresi[0]['datavalue']) / 1000;
+				
+				$secenekler = array(2, 3, 5, 10, 15, 20, 30, 45, 60, 90, 120);
+				
+				echo "<select name='slider-suresi' class='form-control' style='margin-right: 10px; display: inline-block; width: auto;'>";
+				foreach($secenekler as $secenek) {
+					$selected = ($sure_saniye == $secenek) ? "selected" : "";
+					echo "<option value='".$secenek."' ".$selected.">".$secenek." Saniye</option>";
+				}
+				if (!in_array($sure_saniye, $secenekler)) {
+					echo "<option value='".$sure_saniye."' selected>".$sure_saniye." Saniye</option>";
+				}
+				echo "</select>";	
+			}	else{
+				$secenekler = array(2, 3, 5, 10, 15, 20, 30, 45, 60, 90, 120);
+				
+				echo "<select name='slider-suresi' class='form-control' style='margin-right: 10px; display: inline-block; width: auto;'>";
+				foreach($secenekler as $secenek) {
+					
+					echo "<option value='".$secenek."' ".$selected.">".$secenek." Saniye</option>";
+				}
+				echo "</select>";
+			}		
+			?>
+			<input class="btn btn-warning" type="submit" name="form-button" value="SLIDER SÜRESİNİ KAYDET">
+	</form>
+	</div>
+
 <div class="panel panel-primary">
 	<div class="panel panel-heading">
 		VİDEO EKLE
@@ -93,6 +130,9 @@ if ( isset( $_SESSION[ 'yetkili' ] ) ) {//----------------session control wrappe
 	<input type="submit" class="btn btn-success" name="form-button" value="VİDEOYU GÜNCELLE">
 	</form>
 	</div>
+</div>
+
+
 </div>
 		
 	<?php

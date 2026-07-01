@@ -126,16 +126,16 @@ $aylar = ["01" => "ocak", "02" => "şubat", "03" => "mart", "04" => "nisan", "05
                     </div>
                 </div>
                 <?php
-//$sql="SELECT dataname,datavalue FROM ".APP_DATA_DB_TABLE." WHERE dataname='slidertime';";
-//$slider_time=$database->sentQuery($sql);
-//json_encode($slider_time[0]);
+$sql="SELECT CAST(datavalue AS UNSIGNED)AS datavalue FROM ".APP_DATA_DB_TABLE." WHERE dataname='slidertime';";
+$slider_time=$database->sentQuery($sql);
+$slidertime_ms = isset($slider_time[0]['datavalue']) ? $slider_time[0]['datavalue'] : 5000;
                 ?>
                 <script>
                     var sliderImages = document.querySelectorAll(".slide"),
                             arrowLeft = document.querySelector("#arrow-left"),
                             arrowRight = document.querySelector("#arrow-right"),
                             current = 0,
-                            time = 5000;
+                            time = <?php echo $slidertime_ms; ?>;
 
 
                     // Clear all images

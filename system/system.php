@@ -114,7 +114,8 @@ switch ($_POST['form-button']) {
 	$sorgu_islendi = yeniMedyaEkle( $_FILES[ 'medya' ],$_POST['medya-basligi'],$_POST[ 'medya-metni' ], $_POST[ 'yayin-sonu-tarihi' ], $gonderen_sayfa, SITE_REAL_PATH.SLIDER_MEDIA_PATH, 1024 * 1024 * 8, array( "jpg", "jpeg","png", "gif","JPG","JPEG","PNG","GIF" ) );
 		break;
 	case "SLIDER SÜRESİNİ KAYDET":
-		$sorgu_islendi=sliderSuresiniGuncelle($_POST['slider-suresi'],$gonderen_sayfa);
+		$sure_ms = floatval($_POST['slider-suresi']) * 1000;
+		$sorgu_islendi=sliderSuresiniGuncelle($sure_ms,$gonderen_sayfa);
 		break;
 	case "VİDEOYU GÜNCELLE";
 		videoyuGuncelle($_POST['video-url'],$gonderen_sayfa);
